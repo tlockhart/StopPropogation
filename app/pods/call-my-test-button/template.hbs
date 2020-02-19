@@ -1,4 +1,13 @@
-<MyTestButton @onClick={{this.longAction}}>
+<div>
+  <MyTestButton type="button" name="submit" @label="click to stop bubbling" @onClick={{this.longAction}} @stopPropagation = {{true}}/>
   {{!-- YIELD IN THE CALLING COMPONENT --}}
-  Submit
-</MyTestButton>
+  {{!-- StopPropagation=true --}}
+{{!-- </MyTestButton> --}}
+</div>
+
+<div>
+  <MyTestButton type="submit" name="submit" @label="click to start bubbling" @onClick={{this.longAction}} @stopPropagation = {{false}}/>
+  {{!-- YIELD IN THE CALLING COMPONENT --}}
+  {{!-- StopPropagation=false --}}
+{{!-- </MyTestButton> --}}
+</div>
