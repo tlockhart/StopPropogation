@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'stop-propagation',
+    podModulePrefix: 'stop-propagation/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

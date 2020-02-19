@@ -1,0 +1,10 @@
+{{!-- btn Clicked is being passed in, to stopPropatation, set an attribute (@stopPropogation = true) and have a condition in the calling method to test if the propagation is trut or not. --}}
+<button
+ type="button"
+ {{on 'click' this.btnClicked}}>
+  {{#if this.loading}}
+    loading...
+  {{else}}
+    {{yield}}
+  {{/if}}
+</button>
